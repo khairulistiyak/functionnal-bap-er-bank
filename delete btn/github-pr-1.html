@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to Dom delete </h1>
+    <h4 id="delete-aria">Amak delete koro</h4>
+    <input id="delete-type" placeholder="Please type delete" type="text">
+    <button id="btn-delete" disabled>delete</button>
+    <script>
+        // type delete 
+        document.getElementById("delete-type").addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const deleteButton = document.getElementById("btn-delete")
+            if (text === 'delete') {
+                deleteButton.removeAttribute('disabled')
+            }
+            else {
+                deleteButton.setAttribute('disabled', true)
+            }
+        })
+        // delete btn click 
+        document.getElementById("btn-delete").addEventListener("click", function () {
+            const deleteAria = document.getElementById("delete-aria")
+            deleteAria.style.display = "none";
+        })
+    </script>
+</body>
+
+</html>

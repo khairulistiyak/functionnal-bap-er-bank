@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Delete Work</h1>
+    <h2 id="remove-aria">Amak delete Koirenna Delete text</h2>
+    <input id="input-remove" type="text">
+    <button id="btn-remove" disabled>Remove</button>
+    <script>
+        document.getElementById('input-remove').addEventListener("f", function () {
+            const inputText = document.getElementById('input-remove')
+            const inputValue = inputText.value;
+            const removeBtn = document.getElementById('btn-remove')
+            if (inputValue === "delete") {
+                removeBtn.removeAttribute('disabled')
+            }
+            else {
+                removeBtn.setAttribute('disabled', true)
+            }
+        })
+        document.getElementById('btn-remove').addEventListener('click', function () {
+            const removeAria = document.getElementById('remove-aria')
+            removeAria.style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>

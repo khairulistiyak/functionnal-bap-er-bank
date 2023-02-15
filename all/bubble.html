@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dom bubble</h1>
+    <section id="bubble-item">
+        <ul id="ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Totam, expedita!</li>
+            <li id="item-3">Nobis, iure?</li>
+            <li id="item-4">Cum, nostrum.</li>
+            <li id="item-5">Alias, accusantium?</li>
+            <li id="item-6">Ducimus, natus!</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById("bubble-item").addEventListener('click', function (event) {
+            console.log('bubble click')
+            event.stopImmediatePropagation();
+
+        })
+        document.getElementById("item-2").addEventListener('click', function (event) {
+            console.log('item-2 click')
+            event.stopImmediatePropagation()
+        })
+        document.getElementById("item-2").addEventListener('click', function () {
+            console.log('item-2 click')
+
+        })
+        document.getElementById("item-2").addEventListener('click', function () {
+            console.log('item-2 click')
+
+        })
+        document.getElementById("item-3").addEventListener('click', function () {
+            console.log('item-3 click')
+        })
+        document.getElementById("ul").addEventListener('click', function () {
+            console.log('ul click')
+        })
+
+    </script>
+</body>
+
+</html>
